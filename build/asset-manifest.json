@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eb4afa40.chunk.css",
+    "main.js": "/static/js/main.ac31f683.chunk.js",
+    "main.js.map": "/static/js/main.ac31f683.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.621b15e5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.621b15e5.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.36d4ac54.chunk.js": "/static/js/2.36d4ac54.chunk.js",
+    "static/js/2.36d4ac54.chunk.js.map": "/static/js/2.36d4ac54.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.eb4afa40.chunk.css.map": "/static/css/main.eb4afa40.chunk.css.map",
+    "static/js/2.36d4ac54.chunk.js.LICENSE.txt": "/static/js/2.36d4ac54.chunk.js.LICENSE.txt",
+    "static/media/altumcode-Ui3zMjpMrmM-unsplash.f5576a9c.jpg": "/static/media/altumcode-Ui3zMjpMrmM-unsplash.f5576a9c.jpg",
+    "static/media/christina-wocintechchat-com-R_W_9D-53lw-unsplash.952a8e87.jpg": "/static/media/christina-wocintechchat-com-R_W_9D-53lw-unsplash.952a8e87.jpg",
+    "static/media/screen-post-wcoXr9o83o8-unsplash.a48da258.jpg": "/static/media/screen-post-wcoXr9o83o8-unsplash.a48da258.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.621b15e5.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.36d4ac54.chunk.js",
+    "static/css/main.eb4afa40.chunk.css",
+    "static/js/main.ac31f683.chunk.js"
+  ]
+}

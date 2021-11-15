@@ -30,6 +30,9 @@ const dataMenus = [
 ];
 
 const GestionProductos = () => {
+
+  const baseURL = 'https://thawing-garden-90115.herokuapp.com';
+  
   const [showCreate, setShowCreate] = useState(false);
   const handleCreateClose = () => setShowCreate(false);
   const handleCreateShow = () => setShowCreate(true);
@@ -51,7 +54,7 @@ const GestionProductos = () => {
 
   async function addProduct(product) {
     console.log(product);
-    axios.post("http://localhost:3010/api/v1/product/add", product);
+    axios.post(`${baseURL}/api/v1/product/add`, product);
     handleCreateClose();
     listProducts();
   }
@@ -59,7 +62,7 @@ const GestionProductos = () => {
   async function listProducts() {
     try {
       console.log("a buscar la lista..");
-      axios.get("http://localhost:3010/api/v1/product/list").then((resp) => {
+      axios.get(`${baseURL}/api/v1/product/list`).then((resp) => {
         setProducts(resp.data.products);
         console.log(resp.data.products);
       });
@@ -70,14 +73,14 @@ const GestionProductos = () => {
 
   async function deleteProduct(idProduct) {
     console.log("preparando el borrado..." + idProduct);
-    axios.delete("http://localhost:3010/api/v1/product/delete/" + idProduct);
+    axios.delete(`${baseURL}/api/v1/product/delete/` + idProduct);
     listProducts();
   }
 
   async function updateProduct(product) {
     console.log("preparando para actualizar...");
     console.log(product);
-    axios.put("http://localhost:3010/api/v1/product/update", product);
+    axios.put(`${baseURL}/api/v1/product/update`, product);
     handleUpdateClose();
     listProducts();
   }

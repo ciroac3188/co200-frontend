@@ -39,6 +39,8 @@ const dataMenus = [
 
 const GestionUsuarios = () => {
 
+  const baseURL = 'https://thawing-garden-90115.herokuapp.com';
+
   const [showCreate, setShowCreate] = useState(false);
   const handleCreateClose = () => setShowCreate(false);
   const handleCreateShow = () => setShowCreate(true);
@@ -60,7 +62,7 @@ const GestionUsuarios = () => {
 
   async function addUser(user) {
     console.log(user);
-    axios.post("http://localhost:3010/api/v1/user/add", user);
+    axios.post(`${baseURL}/api/v1/user/add`, user);
     handleCreateClose();
     listUsers();
   }
@@ -68,7 +70,7 @@ const GestionUsuarios = () => {
   async function listUsers() {
     try {
       console.log("a buscar la lista..");
-      axios.get("http://localhost:3010/api/v1/user/list").then((resp) => {
+      axios.get(`${baseURL}/api/v1/user/list`).then((resp) => {
         setUsers(resp.data.users);
         console.log(resp.data.users);
       });
@@ -79,14 +81,14 @@ const GestionUsuarios = () => {
 
   async function deleteUser(idUser) {
     console.log("preparando el borrado..." + idUser);
-    axios.delete("http://localhost:3010/api/v1/user/delete/" + idUser);
+    axios.delete(`${baseURL}/api/v1/user/delete/` + idUser);
     listUsers();
   }
 
   async function updateUser(user) {
     console.log("preparando para actualizar...");
     console.log(user);
-    axios.put("http://localhost:3010/api/v1/user/update", user);
+    axios.put(`${baseURL}/api/v1/user/update`, user);
     handleUpdateClose();
     listUsers();
   }

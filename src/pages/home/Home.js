@@ -13,13 +13,15 @@ import axios from "axios";
 
 const Home = () => {
 
+    const baseURL = 'https://thawing-garden-90115.herokuapp.com';
+
     const [showSignUp, setShowSignUp] = useState(false);
     const handleSignUpClose = () => setShowSignUp(false);
     const handleSignUpShow = () => setShowSignUp(true);
 
     async function addUser(user) {
         console.log(user);
-        axios.post("http://localhost:3010/api/v1/user/add", user);
+        axios.post(`${baseURL}/api/v1/user/add`, user);
         handleSignUpClose();
     }
 
